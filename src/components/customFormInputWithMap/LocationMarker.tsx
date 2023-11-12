@@ -8,10 +8,11 @@ type LocationMarkerProps = {
 }
 
 
-export function LocationMarker({}:LocationMarkerProps) {
+export function LocationMarker() {
     const [position, setPosition] = useState(null)
-    const {updateCoordinatesHandler} = useAppStore((store)=>({
-        updateCoordinatesHandler:store?.updateCoordinatesHandler
+    const {updateCoordinatesHandler , userLocationStore} = useAppStore((store)=>({
+        updateCoordinatesHandler:store?.updateCoordinatesHandler,
+        userLocationStore:store?.userLocationStore
     }),shallow)
 
 
@@ -20,7 +21,6 @@ export function LocationMarker({}:LocationMarkerProps) {
             map.locate()
         },
         locationfound(e) {
-            console.log("eventFound",e)
             setPosition(e?.latlng)
             map.flyTo(e.latlng, map.getZoom())
         },

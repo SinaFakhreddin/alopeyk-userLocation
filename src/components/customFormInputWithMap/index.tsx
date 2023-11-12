@@ -25,7 +25,7 @@ const CustomFormInputWithMap = ({autoComplete,label,labelClassname,errorClassNam
                {label}
            </label>
            <div className="mt-1 relative">
-               <Field className={'invisible absolute inset-0'}  id={name} name={name} type={type} autoComplete={autoComplete} required
+               <Field className={'absolute inset-0'}  id={name} name={name} type={type} autoComplete={autoComplete} required
                />
                <div className={'flex items-center justify-center border'}>
                    <MapContainer

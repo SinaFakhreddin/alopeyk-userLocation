@@ -28,7 +28,6 @@ const ModalComponent = ({icon,modalTitle , modalBody}:ModalComponentProps) => {
 
 
     const handlerOutSideClick= (e:MouseEvent)=>{
-        console.log("ee",modalBodyRef.current?.contains(e.target))
         if (modalBodyRef?.current && !modalBodyRef.current?.contains(e.target)){
             modalHandler(false)
         }

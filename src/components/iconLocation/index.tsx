@@ -7,7 +7,7 @@ import {shallow} from "zustand/shallow";
 const IconLocation = () => {
 
     const {modalHandler} = useAppStore((store)=>({
-        modalHandler:store.modalHandler
+        modalHandler:store?.modalHandler
     }),shallow)
 
     return (
