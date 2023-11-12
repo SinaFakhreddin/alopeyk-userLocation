@@ -1,19 +1,15 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import {useAppStore} from "../../store/locationStore";
 import {shallow} from "zustand/shallow";
-import {LocationMarker} from "../customFormInputWithMap/LocationMarker";
-import {DraggableMarker} from "../customFormInputWithMap/DragableMarker";
-import {ATTRIBUTION, TILE_LAYER_ATTRIBUTION, TILE_LAYER_URL} from "../../constants";
+import { TILE_LAYER_ATTRIBUTION, TILE_LAYER_URL} from "../../constants";
 
 
 
 
 const MapComponent = () => {
-    const {userLocationStore,coordinates,updateCoordinatesHandler} = useAppStore((store)=>({
+    const {userLocationStore} = useAppStore((store)=>({
         userLocationStore : store?.userLocationStore,
-        coordinates : store?.coordinates,
-        updateCoordinatesHandler:store?.updateCoordinatesHandler
     }),shallow)
 
 

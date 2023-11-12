@@ -4,8 +4,6 @@ import MapComponent from "../mapComponent";
 import {MapContainer, Marker, Popup, TileLayer, useMapEvents} from "react-leaflet";
 import {LocationMarker} from "./LocationMarker";
 import {DraggableMarker} from "./DragableMarker";
-import {useAppStore} from "../../store/locationStore";
-import {shallow} from "zustand/shallow";
 
 type CustomFormInputWithMapProps = {
     name:string
@@ -30,7 +28,7 @@ const CustomFormInputWithMap = ({autoComplete,label,labelClassname,errorClassNam
                <div className={'flex items-center justify-center border'}>
                    <MapContainer
                        style={{height:"150px"}}
-                       center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+                       center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
                        <TileLayer
                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
