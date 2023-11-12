@@ -12,7 +12,8 @@ type ModalComponentProps = {
     modalTitle:ReactNode,
     icon:ReactElement,
     modalBody:ReactNode,
-    onHideModal:()=>void
+    onHideModal?:()=>void
+    setWelcomeModalShow?:()=>void
 
 }
 
