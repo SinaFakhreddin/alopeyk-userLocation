@@ -1,0 +1,6 @@
+export const SUCCESSFUL = "successful"
+export const USER_LOCATIONS = "userLocations"
+export const STATE_CHANGED= "state_changed"
+export const USER_LOCATIONS_LOGO= "userLocationsLogo"
+export const TILE_LAYER_ATTRIBUTION = "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors"
+export const TILE_LAYER_URL="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

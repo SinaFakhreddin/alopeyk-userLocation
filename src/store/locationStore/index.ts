@@ -1,7 +1,5 @@
 import create from 'zustand';
 import {Coordinates, Location, Modal, MyStore, ProgressBar} from "../../types";
-import {Simulate} from "react-dom/test-utils";
-import progress = Simulate.progress;
 
 
 const initialUserLocationState:Location[] = []

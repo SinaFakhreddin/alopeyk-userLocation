@@ -34,3 +34,9 @@ export interface MyStore {
     updateProgressPercent:(percent:number|string)=>MyStore,
     getAllLocation:(locations:Location[])=>MyStore
 }
+
+export interface CoordinateFormProps {
+    updateLocation:(location:Location)=>void
+    coordinates:Coordinates,
+    modalHandler:(show:boolean)=>void
+}

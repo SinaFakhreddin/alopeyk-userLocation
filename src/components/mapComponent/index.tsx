@@ -4,6 +4,7 @@ import {useAppStore} from "../../store/locationStore";
 import {shallow} from "zustand/shallow";
 import {LocationMarker} from "../customFormInputWithMap/LocationMarker";
 import {DraggableMarker} from "../customFormInputWithMap/DragableMarker";
+import {ATTRIBUTION, TILE_LAYER_ATTRIBUTION, TILE_LAYER_URL} from "../../constants";
 
 
 
@@ -23,8 +24,8 @@ const MapComponent = () => {
         <MapContainer
             center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
             <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution={TILE_LAYER_ATTRIBUTION}
+                url={TILE_LAYER_URL}
             />
             {
                 userLocationStore?.map((userLoc)=>{

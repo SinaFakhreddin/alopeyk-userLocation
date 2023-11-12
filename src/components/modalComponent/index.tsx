@@ -20,14 +20,12 @@ type ModalComponentProps = {
 
 
 const ModalComponent = ({icon,modalTitle , modalBody}:ModalComponentProps) => {
-    const {modalHandler,showModal} = useAppStore((store)=>({
+    const {modalHandler} = useAppStore((store)=>({
         modalHandler:store.modalHandler,
-        showModal:store.modal.showModal
     }),shallow)
+
+
     const modalBodyRef = useRef<HTMLDivElement | null>(null);
-
-
-
     const handlerOutSideClick= (e:MouseEvent)=>{
         if (modalBodyRef?.current && !modalBodyRef.current?.contains(e.target)){
             modalHandler(false)
